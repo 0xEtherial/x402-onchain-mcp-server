@@ -1,0 +1,65 @@
+name: x402-onchain-mcp-server
+description: MCP server for x402 On-Chain Data API - pay-per-call blockchain data including wallet profiles, token metrics, protocol TVL, and gas prices
+version: 1.0.0
+author: 0xEtherial
+license: MIT
+repository:
+  type: git
+  url: https://github.com/0xEtherial/x402-onchain-mcp-server
+keywords:
+  - mcp
+  - blockchain
+  - ethereum
+  - crypto
+  - defi
+  - wallet
+  - token
+  - gas
+  - tvl
+  - x402
+  - pay-per-call
+
+tools:
+  - name: x402_wallet_score
+    description: Get wallet profile with ETH balance, transaction history, and top tokens
+    cost: "$0.10"
+    
+  - name: x402_token_metrics
+    description: Get token price, market cap, volume, and liquidity data
+    cost: "$0.05"
+    
+  - name: x402_protocol_tvl
+    description: Get DeFi protocol TVL and chain breakdown
+    cost: "$0.05"
+    
+  - name: x402_gas_prices
+    description: Get current Ethereum gas prices with USD estimates
+    cost: "$0.02"
+    
+  - name: x402_health
+    description: Check API health status
+    cost: free
+
+installation:
+  npm:
+    command: npm install
+    start: node server.js
+    
+configuration:
+  environment_variables:
+    - name: API_BASE_URL
+      description: x402 On-Chain API base URL
+      default: http://localhost:8900
+      required: false
+
+compatibility:
+  claude_desktop: true
+  cursor: true
+  windsurf: true
+  continue: true
+  
+requirements:
+  node: ">=18.0.0"
+  npm: ">=8.0.0"
+
+category: blockchain-data

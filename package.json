@@ -1,0 +1,33 @@
+{
+  "name": "x402-onchain-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for x402 On-Chain Data API - pay-per-call blockchain data",
+  "type": "module",
+  "main": "server.js",
+  "author": "0xEtherial",
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "blockchain",
+    "ethereum",
+    "crypto",
+    "x402",
+    "on-chain-data"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "dotenv": "^16.4.5",
+    "node-fetch": "^3.3.2"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/0xEtherial/x402-onchain-mcp-server"
+  }
+}
